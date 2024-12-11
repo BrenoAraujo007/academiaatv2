@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cadastrar'])) {
     $valor_pagamento = $_POST['valor_pagamento'];
     $frequencia = $_POST['frequencia'];
 
-    // Inserir novo usuário no banco de dados
+// Inserir novo usuário no banco de dados
     $dados = $conn->prepare("INSERT INTO usuarios (nome, cpf, pago, ultimo_pagamento, valor_pagamento, frequencia) VALUES (?, ?, ?, ?, ?, ?)");
     $dados->execute([$nome, $cpf, $pago, $ultimo_pagamento, $valor_pagamento, $frequencia]);
 

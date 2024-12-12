@@ -1,9 +1,6 @@
 CREATE DATABASE academibanc;
 USE academibanc;
 
-CREATE DATABASE academia;
-USE academia;
-
 CREATE TABLE usuarios (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(255) NOT NULL,

@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $dados->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
-        // Login bem-sucedido, redirecionar para a página de gerenciamento
+        // Login funcionou, redirecionar para a página de gerenciamento
         $_SESSION['usuario_id'] = $user['id'];
         header("Location: geren.php");
         exit();
